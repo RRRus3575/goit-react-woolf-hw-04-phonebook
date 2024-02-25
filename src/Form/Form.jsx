@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import { useState } from "react";
 import css from "./Form.module.css";
 import { Input } from "../inputs/Input";
 import PropTypes from "prop-types";
