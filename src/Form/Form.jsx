@@ -3,32 +3,22 @@ import css from "./Form.module.css";
 import { Input } from "../inputs/Input";
 import PropTypes from "prop-types";
 
-export const Form = (props) => {
-  // state = {
-  //   name: "",
-  //   number: "",
-  // };
-
+export const Form = ({ onSubmit }) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
   const handleChangeName = (e) => {
-    console.log(e);
     setName(e.target.value);
-    // this.setState({
-    //   [e.target.name]: e.target.value,
-    // });
   };
 
   const handleChangeNumber = (e) => {
-    console.log(e);
     setNumber(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    props.onSubmit(name, number);
+    onSubmit(name, number);
 
     e.target.reset();
   };
